@@ -62,6 +62,8 @@ header h1 a:hover {
     padding: 0.5rem;
     gap: 4px;
     z-index: 1001;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .hamburger span {
@@ -682,6 +684,8 @@ footer {
     
     .hamburger {
         display: flex;
+        visibility: visible;
+        opacity: 1;
     }
     
     .nav-menu {
