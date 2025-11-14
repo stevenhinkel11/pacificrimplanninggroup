@@ -10,7 +10,12 @@
     <header>
         <nav>
             <div class="nav-container">
-                <h1>Pacific Rim Planning Group</h1>
+                <h1><a href="index.html" style="color: #ecf0f1; text-decoration: none;">Pacific Rim Planning Group</a></h1>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -66,5 +71,22 @@
             <p>&copy; 2025 Pacific Rim Planning Group. All rights reserved. | <a href="privacy.html" style="color: #ecf0f1; text-decoration: underline;">Privacy Policy</a></p>
         </div>
     </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
